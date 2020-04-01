@@ -1,0 +1,377 @@
+\documentclass[11pt,a4paper]{jsarticle}
+%
+\usepackage{amsmath,amssymb}
+\usepackage{bm}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{ascmac}
+%
+\setlength{\textwidth}{\fullwidth}
+\setlength{\textheight}{39\baselineskip}
+\addtolength{\textheight}{\topskip}
+\setlength{\voffset}{-0.5in}
+\setlength{\headsep}{0.3in}
+%
+%\setlength{\topmargin} {1pt} % = 0.3528mm
+\setlength{\textheight}{200mm} 
+%
+\newcommand{\divergence}{\mathrm{div}\,}  %ダイバージェンス
+\newcommand{\grad}{\mathrm{grad}\,}  %グラディエント
+\newcommand{\rot}{\mathrm{rot}\,}  %ローテーション
+%
+\pagestyle{myheadings}
+\markright{\footnotesize \sf BL04解析 　TOF-Energy 変換}
+\begin{document}
+%
+
+
+\begin{eqnarray}
+\Delta \sigma _{cp}= \kappa (J) \frac{w}{v}\Delta \sigma_{p}
+\nonumber
+\end{eqnarray}
+
+
+
+
+\begin{eqnarray}
+\sigma(E)=\frac{P1}{\sqrt{E}}\frac{P2^{2}}{(E-P3)^2-P2^2/4}+\frac{P4}{\sqrt{E}}\frac{P5^{2}}{(E-P6)^2-P5^2/4}
+\nonumber
+\end{eqnarray}
+
+
+
+
+\begin{eqnarray}
+P(JJ'jj'kIF)=(-1)^{J+J'+j'+I+F}\frac{3}{2}\sqrt{(2J+1)(2J'+1)(2j+1)(2j'+1))}
+\left\{
+\begin{tabular}{ccc}
+$k$ & $ j$ & $j' $\\
+$I$ & $J'$ & $J $\\
+\end{tabular}
+\right\} \left\{
+\begin{tabular}{ccc}
+$k$ &  1 & 1  \\
+$F$ &  $J$ & $J'$  \\
+\end{tabular}
+\right\}   \nonumber
+\end{eqnarray}
+
+\begin{eqnarray}
+| \kappa(J) |
+\end{eqnarray}
+
+\begin{eqnarray}
+\Gamma_{D} = \sqrt{\frac{4E_0 k T}{A}}
+\end{eqnarray}
+
+
+
+
+
+
+
+
+
+%a_9
+$a_9$
+
+
+\begin{eqnarray}
+\frac{d\sigma}{d\Omega} &=& \frac{1}{2}  ( a_0+ a_1 cos \theta_\gamma + a_3\left(cos^2 \theta_\gamma -\frac{1}{3} \right)  \nonumber \\ 
+&+&a_9({\bf \sigma}_n \cdot {\bf k}_\gamma) + a_{12}\left(({\bf \sigma}_n \cdot {\bf k}_n)({\bf k}_n \cdot {\bf k}_\gamma) -\frac{1}{3}({\bf \sigma}_n \cdot {\bf k}_\gamma) \right)
+)
+\end{eqnarray}
+
+\begin{eqnarray}
+\left(\frac{d\sigma}{d\Omega}\right)_\uparrow - \left(\frac{d\sigma}{d\Omega}\right)_\downarrow
+=a_9-\frac13a_{12}
+\nonumber
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ a_9=
+ -2Re(\sum_{J_s,J'_s} V_1(J_s)V^*_3(J'_s)P(J_sJ'_s \frac12 \frac12 1 I F) \nonumber \\
+ +\sum_{J_p,j,J'_p,j'} V_2(J_pj)V^*_4(J'_pj')P(J_pJ'_p j j' 1 I F)  \nonumber \\
+\times 6 \left\{
+\begin{array}{ccc}
+0&1&1\\
+1&\frac12&\frac12\\
+1&j&j'
+\end{array}
+\right\}
+ )
+  \end{eqnarray}
+
+\begin{eqnarray}
+ a_{12}=
+ -2Re\sum_{J_s,j,J'_p,j'} V_2(J_pj)V^*_4(J'_pj')P(J_pJ'_p j j' 1 I F) 
+\times 18 \left\{
+\begin{array}{ccc}
+2&1&1\\
+1&\frac12&\frac12\\
+1&j&j'
+\end{array}
+\right\}
+ )
+  \end{eqnarray}
+
+%a_10
+$a_{10}$
+
+\begin{eqnarray}
+\frac{d\sigma}{d\Omega} &=& \frac{1}{2}  ( a_0+ a_1 cos \theta_\gamma + a_3\left(cos^2 \theta_\gamma -\frac{1}{3} \right)  \nonumber \\ 
+&+&a_{10}({\bf \sigma}_n \cdot {\bf k}_n) + a_{11}\left(({\bf \sigma}_n \cdot {\bf k}_\gamma)({\bf k}_n \cdot {\bf k}_\gamma) -\frac{1}{3}({\bf \sigma}_n \cdot {\bf k}_n) \right)
+)
+\end{eqnarray}
+
+\begin{eqnarray}
+\left(\frac{d\sigma}{d\Omega}\right)_+ - \left(\frac{d\sigma}{d\Omega}\right)_-
+=a_{10}-\frac13a_{11}
+\nonumber
+\end{eqnarray}
+
+
+\begin{eqnarray}
+ a_{10}=
+ -2Re\sum_{J_s} \left(V_2(J_p=J_s,1/2)V^*_3(J_s)
+ +V_1(J_s)V^*_4(J_p=J_s,1/2) \right) \nonumber \\
+  \end{eqnarray}
+
+\begin{eqnarray}
+ a_{11}=
+ 2Re\sum_{J_s,J_p} V_2(J_p,\frac32)V^*_3(J_s) +V_1(J_s)V^*_4(J_p,\frac32) \sqrt{3}P(J_sJ_p \frac12 \frac32 2 I F) 
+  \end{eqnarray}
+
+%T-violationの散乱振幅
+
+\begin{eqnarray}
+f^{'}=A^{'} + B^{'} {\pmb \sigma} \cdot \hat{I} +C ^{'}{\pmb \sigma} \cdot \hat{k}+D^{'} {\pmb \sigma} \cdot (\hat{I} \times \hat {k})   \nonumber \\
+f=A + B {\pmb \sigma} \cdot \hat{I} +C{\pmb \sigma} \cdot \hat{k}+D {\pmb \sigma} \cdot (\hat{I} \times \hat {k})    \nonumber 
+\end{eqnarray}
+
+
+\begin{eqnarray}
+A=e^{iZA^{'}} \cos b \nonumber\\
+B=e^{iZA^{'}} \frac{\sin b}{b}ZB^{'} \nonumber\\
+C=e^{iZA^{'}} \frac{\sin b}{b}ZC^{'} \nonumber\\
+D=e^{iZA^{'}} \frac{\sin b}{b}ZD^{'} \nonumber\\
+Z=2\pi\rho z/k  \nonumber\\
+b=Z\sqrt{B^{'2}+C^{'2}+D^{'2}}
+\end{eqnarray}
+
+\begin{eqnarray}
+A=e^{iZA^{'}} \cos b , \hspace{5mm}
+B=e^{iZA^{'}} \frac{\sin b}{b}ZB^{'} ,  \hspace{5mm} 
+C=e^{iZA^{'}} \frac{\sin b}{b}ZC^{'} \nonumber\\
+D=e^{iZA^{'}} \frac{\sin b}{b}ZD^{'} ,   \hspace{5mm}
+Z=2\pi\rho z/k  ,   \hspace{5mm}
+b=Z\sqrt{B^{'2}+C^{'2}+D^{'2}}
+\end{eqnarray}
+
+
+\begin{eqnarray}
+\omega & = & 2\pi\rho B^{'}v/k \\
+ & = & \gamma B^{'}_{pseudo}
+\end{eqnarray}
+
+
+
+
+\begin{eqnarray}
+cos\theta
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+\left(\frac{d\sigma}{d\Omega}\right)_{\theta=70^{\circ}} - \left(\frac{d\sigma}{d\Omega}\right)_{\theta=110^{\circ}}
+= a_{1} cos 70^\circ
+\end{eqnarray}
+
+
+
+
+\begin{eqnarray}
+\left(\frac{d\sigma}{d\Omega}\right)_{\theta=70^{\circ}} + \left(\frac{d\sigma}{d\Omega}\right)_{\theta=110^{\circ}}
+-2\left(\frac{d\sigma}{d\Omega}\right)_{\theta=90^{\circ}}
+= a_{3}\left(2 cos^2 70^\circ  - \frac{4}{3} \right)
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+A_1=\frac{a_{1x}cos\phi+a_{1y}sin\phi}{a0}
+\end{eqnarray}
+
+\begin{eqnarray}
+A_3=\frac{a_{3xy}cos\phi\sin\phi+a_{3yy}sin^2\phi}{a0}
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+\vec{\sigma}\cdot (\vec{k}\times \vec{I})
+\end{eqnarray}
+
+\begin{eqnarray}
+\vec{\sigma}\cdot \vec{k}\times \vec{I}\cdot \vec{r}
+\end{eqnarray}
+
+\begin{eqnarray}
+\vec{\sigma} = \vec{r} \times \vec{k}
+\end{eqnarray}
+
+\begin{eqnarray}
+h = \vec{\sigma} \cdot \vec{k}
+\end{eqnarray}
+
+\begin{eqnarray}
+{
+j = l + s}
+\end{eqnarray}
+
+
+
+
+
+\begin{eqnarray}
+A_L = \frac{\sigma^{+} - \sigma^{-}}{\sigma^{+} + \sigma^{-}}
+\end{eqnarray}
+
+
+
+
+
+
+\begin{eqnarray}
+\frac{d\sigma}{d\Omega} 
+&= & \frac{1}{2}(a_0+a_1{\bf k}_n\cdot {\bf k}_\gamma
++a_3(({\bf k}_n\cdot {\bf k}_\gamma)^2-\frac{1}{3}))   \nonumber \\
+%&= &\frac{1}{2}(a_0+a_1 cos\theta+a_3(cos^2 \theta-\frac{1}{3})     \nonumber \\
+&= &\frac{a_0}{2}(1+A_1 cos\theta
++A_3(cos^2 \theta-\frac{1}{3})   \nonumber
+\end{eqnarray}
+
+\hspace{3cm}
+
+
+\begin{eqnarray}
+a_1=2 Re\sum_{J_s,J_p,j}^{ }  V_1(J_s)V_2^*(J_p j)P(J_s J_p \frac{1}{2}j 1 I F)
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+V_1(J_s)= \frac{1}{2k_s}\sqrt{\frac{E_s}{E}}\frac{\sqrt {g\Gamma_s^n \Gamma_\gamma}}{E-E_s +i \Gamma_s/2}   \nonumber \\
+V_2(J_pj)= \frac{1}{2k_p}\sqrt{\frac{E_p}{E}}\sqrt{\frac{\Gamma_{pj}^{n}}{\Gamma^n_p}}\frac{\sqrt {g\Gamma_p^n \Gamma_\gamma}}{E-E_p +i \Gamma_p/2}
+\end{eqnarray}
+
+
+
+
+
+
+
+\begin{eqnarray}
+\frac{d\sigma}{d\Omega} 
+&= &\frac{a_0}{2}(1+A_1 cos\theta
++A_3(cos^2 \theta-\frac{1}{3})   \nonumber
+\end{eqnarray}
+
+
+
+
+
+
+
+
+\begin{eqnarray}
+a_1=a_{1x}cos\phi+a_{1y}sin\phi  \\
+\\
+a_3=a_{3xy}cos\phi sin\phi+a_{3yy}sin^2\phi \\
+\\
+\frac{n_L-n_H}{n_L+n_H}
+\end{eqnarray}
+
+
+
+
+
+
+\hspace{3cm}
+
+$^{139}La$ $E_n=0.734eV$に対して
+$$
+(A_1)_{E=E_p\pm\Gamma_p/2} \simeq \pm (-0.2194x+0.2595y)  
+$$
+$$
+(A_3)_{E=E_p} \simeq -0.4258xy+0.07197y^2
+$$
+
+\hspace{3cm}
+A$_1$の値はE=E$_p$のp波共鳴点の前後で符号をかえる。\\
+\hspace{3cm}
+そこでE=E$_p$より高いエネルギー領域の断面積をN$_f$、\\
+\hspace{3cm}
+低いエネルギー領域をN$_b$とすると、
+$$
+N_f=C(1+A_1 cos\theta + A_3 (cos^2 \theta-\frac{1}{3}))
+$$
+$$
+N_b=C(1-A_1 cos\theta + A_3 (cos^2 \theta-\frac{1}{3}))
+$$
+
+\hspace{3cm}
+この式から
+\begin{eqnarray}
+\frac{N_f+N_b}{2} &=&C(1+A_3(cos^2\theta-\frac{1}{3})  \nonumber \\
+\frac{N_f-N_b}{2}&=&CA_1cos\theta \nonumber
+\end{eqnarray}
+
+$$
+\frac{R_f-R_b}{RS}=-0.007
+$$
+
+\newpage
+$$
+(A_1)_{E=E_p+\Gamma_p/2} \simeq -0.2194x+0.2595y  
+$$
+$$
+(A_3)_{E=E_p} \simeq -0.4258xy+0.07197y^2
+$$
+\hspace{4cm}において
+$$
+x=cos\phi
+$$
+$$
+y=sin\phi
+$$
+\hspace{4cm}として、実験より求まったA$_1$,A$_3$と比較
+
+
+この式から
+\begin{eqnarray}
+x^2 = cos^2\phi = \Gamma^n_{p,1/2}/\Gamma^n_p  \nonumber \\
+y^2 = sin^2\phi = \Gamma^n_{p,3/2}/\Gamma^n_p \nonumber  \\
+x^2+y^2=1 \nonumber
+\end{eqnarray}
+
+
+
+\begin{eqnarray}
+\kappa (J=I+\frac{1}{2})=\frac{3}{2\sqrt{2}}\left( \frac{2I+1}{2I+3} \right)
+\frac{\sqrt{2I+1}(2\sqrt{I}x-\sqrt{2I+3}y)}{(2I-3)\sqrt{2I+3}x-(2I+9)\sqrt{I}y}
+\nonumber\\
+\kappa (J=I-\frac{1}{2})=\frac{3}{2\sqrt{2}}\left( \frac{(2I+1)\sqrt{I}}{\sqrt{(I+1)(2I-1)}} \right)
+\frac{2\sqrt{I+1}x+\sqrt{2I-1}y}{(I+3)\sqrt{2I-1}x+(4I-3)\sqrt{I+1}y}
+\nonumber\\
+\end{eqnarray}
+
+
+
+
+
+%
+%
+\end{document}
